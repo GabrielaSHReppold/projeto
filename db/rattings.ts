@@ -1,1 +1,0 @@
-import { Ratting } from "../src/classes/Ratting"

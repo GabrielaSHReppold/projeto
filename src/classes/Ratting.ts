@@ -4,16 +4,20 @@ import { User } from "./User";
 
 export type Rate = 0 | 1 | 2 | 3 | 4 | 5;
 
-export class Rating extends Base {
+export class Ratting extends Base {
     
     public rate: Rate;
     private _product: Product;
     private _user: User;
 
-    constructor(rate: Rate, _product: Product, _user: User){
+    constructor(rate: Rate, product: Product, user: User){
         super();
         this.rate = rate;
-        this._product = _product; 
-        this._user = _user;  
+        this._product = product; 
+        this._user = user;  
+    }
+
+    public get product() : Product {
+        return this._product
     }
 }
